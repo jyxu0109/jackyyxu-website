@@ -1,0 +1,737 @@
+/* ========================================
+   AI Page
+======================================== */
+
+.ai-page {
+    background: var(--background-light);
+}
+
+
+/* ========================================
+   Hero
+======================================== */
+
+.ai-hero {
+    min-height: 100vh;
+    padding: 150px 9% 105px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background:
+        radial-gradient(
+            circle at 82% 18%,
+            rgba(180, 145, 108, 0.22),
+            transparent 31%
+        ),
+        linear-gradient(
+            135deg,
+            #fbfaf7 0%,
+            #eee8df 52%,
+            #d3c0aa 100%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.ai-eyebrow {
+    margin-bottom: 38px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+}
+
+.ai-hero h1 {
+    max-width: 1350px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(68px, 10.5vw, 162px);
+    font-weight: 400;
+    letter-spacing: -0.065em;
+    line-height: 0.82;
+}
+
+.ai-hero h1 span {
+    display: block;
+    color: var(--text-secondary);
+}
+
+.ai-hero-copy {
+    max-width: 780px;
+    margin-top: 58px;
+
+    color: var(--text-secondary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(24px, 3vw, 44px);
+    line-height: 1.25;
+}
+
+
+/* ========================================
+   Why
+======================================== */
+
+.ai-why {
+    padding: 140px 9% 150px;
+
+    background: #faf8f4;
+    border-bottom: 1px solid var(--border);
+}
+
+.ai-why-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(310px, 0.9fr)
+        minmax(430px, 1.1fr);
+
+    align-items: start;
+    gap: clamp(70px, 9vw, 145px);
+}
+
+.ai-why h2 {
+    max-width: 700px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(46px, 5.7vw, 86px);
+    font-weight: 400;
+    letter-spacing: -0.047em;
+    line-height: 0.98;
+}
+
+.ai-why-copy {
+    max-width: 720px;
+}
+
+.ai-why-copy p,
+.ai-product-copy p {
+    color: var(--text-secondary);
+
+    font-size: 18px;
+    line-height: 1.85;
+}
+
+.ai-why-copy p + p,
+.ai-product-copy p + p {
+    margin-top: 28px;
+}
+
+.ai-why-copy .ai-lead,
+.ai-product-copy .ai-product-lead {
+    margin-bottom: 44px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(29px, 3vw, 46px);
+    letter-spacing: -0.028em;
+    line-height: 1.24;
+}
+
+
+/* ========================================
+   Product
+======================================== */
+
+.ai-product {
+    padding: 135px 9% 155px;
+
+    background: #e9e1d5;
+    border-bottom: 1px solid var(--border);
+}
+
+.ai-product-heading,
+.ai-capabilities-heading,
+.ai-roadmap-heading {
+    display: grid;
+    grid-template-columns: 0.55fr 1.45fr;
+
+    align-items: start;
+    gap: 70px;
+}
+
+.ai-product-heading h2,
+.ai-capabilities-heading h2,
+.ai-roadmap-heading h2 {
+    max-width: 940px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(50px, 6vw, 94px);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.96;
+}
+
+.ai-product-grid {
+    margin-top: 90px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(430px, 1.15fr)
+        minmax(320px, 0.85fr);
+
+    align-items: start;
+    gap: clamp(65px, 8vw, 125px);
+}
+
+.ai-interface {
+    overflow: hidden;
+
+    background: #1c1b19;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 3px;
+
+    box-shadow:
+        0 34px 80px rgba(47, 38, 28, 0.16);
+}
+
+.ai-interface-header {
+    min-height: 58px;
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.ai-interface-body {
+    padding: clamp(32px, 5vw, 70px);
+}
+
+.interface-label {
+    color: #c9a77e;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.ai-interface h3 {
+    margin-top: 30px;
+
+    color: #faf8f4;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(34px, 4.5vw, 68px);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 1;
+}
+
+.interface-result {
+    max-width: 650px;
+    margin-top: 32px;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.interface-metrics {
+    margin-top: 55px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    border-left: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.interface-metrics div {
+    min-height: 120px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.13);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.interface-metrics span {
+    color: rgba(255, 255, 255, 0.46);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+.interface-metrics strong {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.ai-product-copy {
+    max-width: 650px;
+    padding-top: 10px;
+}
+
+
+/* ========================================
+   Capabilities
+======================================== */
+
+.ai-capabilities {
+    padding: 135px 9% 155px;
+
+    background: #faf8f4;
+    border-bottom: 1px solid var(--border);
+}
+
+.capabilities-grid {
+    margin-top: 85px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.capability-card {
+    min-height: 330px;
+    padding: 30px;
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.capability-card:hover {
+    background: #f2eee7;
+    transform: translateY(-3px);
+}
+
+.capability-number,
+.principle > span {
+    color: var(--accent);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.capability-card h3,
+.principle h3 {
+    margin-top: 55px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(28px, 3vw, 46px);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.04;
+}
+
+.capability-card p,
+.principle p {
+    margin-top: 32px;
+
+    color: var(--text-secondary);
+
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* ========================================
+   Principles
+======================================== */
+
+.ai-principles {
+    padding: 140px 9% 155px;
+
+    background: #f2eee7;
+    border-bottom: 1px solid var(--border);
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.principle {
+    min-height: 350px;
+    padding: 34px;
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* ========================================
+   Roadmap
+======================================== */
+
+.ai-roadmap {
+    padding: 135px 9% 155px;
+
+    background: #e9e1d5;
+    border-bottom: 1px solid var(--border);
+}
+
+.roadmap-list {
+    margin-top: 90px;
+
+    border-top: 1px solid var(--border);
+}
+
+.roadmap-item {
+    min-height: 170px;
+    padding: 30px 0;
+
+    display: grid;
+    grid-template-columns: 90px 1fr 0.8fr;
+
+    align-items: center;
+    gap: 35px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.roadmap-stage {
+    color: var(--accent);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+}
+
+.roadmap-item h3 {
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(28px, 3.5vw, 55px);
+    font-weight: 400;
+    letter-spacing: -0.038em;
+    line-height: 1.04;
+}
+
+.roadmap-item p {
+    color: var(--text-secondary);
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   Closing
+======================================== */
+
+.ai-closing {
+    padding: 150px 12%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4c2ad 0%,
+            #eee8df 55%,
+            #faf8f4 100%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.ai-closing blockquote {
+    max-width: 1150px;
+    margin-top: 42px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(46px, 6.2vw, 94px);
+    letter-spacing: -0.05em;
+    line-height: 1.03;
+}
+
+
+/* ========================================
+   Next Page
+======================================== */
+
+.next-page {
+    padding: 115px 9% 135px;
+
+    background: #faf8f4;
+}
+
+.next-page a {
+    margin-top: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--text-primary);
+    text-decoration: none;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        padding 0.3s ease,
+        background 0.3s ease;
+}
+
+.next-page a:hover {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    background: rgba(233, 225, 213, 0.4);
+}
+
+.next-page a span:first-child {
+    padding: 32px 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(40px, 6vw, 92px);
+    letter-spacing: -0.045em;
+}
+
+.next-page a span:last-child {
+    color: var(--accent);
+    font-size: 36px;
+
+    transition: transform 0.25s ease;
+}
+
+.next-page a:hover span:last-child {
+    transform: translateX(8px);
+}
+
+
+/* ========================================
+   Entrance Animation
+======================================== */
+
+.ai-hero > * {
+    opacity: 0;
+    transform: translateY(14px);
+
+    animation:
+        ai-reveal
+        0.9s
+        cubic-bezier(0.22, 0.61, 0.36, 1)
+        forwards;
+}
+
+.ai-hero > *:nth-child(1) {
+    animation-delay: 0.08s;
+}
+
+.ai-hero > *:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.ai-hero > *:nth-child(3) {
+    animation-delay: 0.34s;
+}
+
+@keyframes ai-reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 950px) {
+
+    .ai-why-grid,
+    .ai-product-heading,
+    .ai-product-grid,
+    .ai-capabilities-heading,
+    .ai-roadmap-heading {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .capabilities-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .roadmap-item {
+        grid-template-columns: 70px 1fr;
+    }
+
+    .roadmap-item p {
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 620px) {
+
+    .ai-hero {
+        min-height: 82vh;
+        padding: 122px 24px 75px;
+    }
+
+    .ai-hero h1 {
+        font-size: clamp(54px, 17vw, 88px);
+        line-height: 0.9;
+    }
+
+    .ai-hero-copy {
+        margin-top: 42px;
+        font-size: 23px;
+    }
+
+    .ai-why,
+    .ai-product,
+    .ai-capabilities,
+    .ai-principles,
+    .ai-roadmap,
+    .ai-closing,
+    .next-page {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .ai-why,
+    .ai-product,
+    .ai-capabilities,
+    .ai-principles,
+    .ai-roadmap {
+        padding-top: 100px;
+        padding-bottom: 115px;
+    }
+
+    .ai-why-copy p,
+    .ai-product-copy p {
+        font-size: 16px;
+    }
+
+    .ai-product-grid,
+    .capabilities-grid {
+        margin-top: 60px;
+    }
+
+    .interface-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .capabilities-grid,
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .capability-card,
+    .principle {
+        min-height: 290px;
+        padding: 25px;
+    }
+
+    .roadmap-list {
+        margin-top: 60px;
+    }
+
+    .roadmap-item {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .roadmap-item p {
+        grid-column: auto;
+    }
+
+    .ai-closing {
+        padding-top: 110px;
+        padding-bottom: 115px;
+    }
+
+    .next-page {
+        padding-top: 90px;
+        padding-bottom: 105px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ai-hero > * {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+}

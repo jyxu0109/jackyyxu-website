@@ -1,0 +1,448 @@
+/* ========================================
+   About Page
+======================================== */
+
+.inner-page {
+    background: var(--background-light);
+}
+
+/* ========================================
+   Header
+======================================== */
+
+.inner-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+    min-height: 82px;
+    padding: 0 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-link {
+    color: var(--text-secondary);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.back-link:hover {
+    color: var(--text-primary);
+    opacity: 0.7;
+}
+
+/* ========================================
+   About Hero
+======================================== */
+
+.about-hero {
+    min-height: 72vh;
+    padding: 145px 10% 95px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fbfaf7 0%,
+            #eee8df 52%,
+            #d6c4af 100%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.about-hero-eyebrow {
+    margin-bottom: 34px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(82px, 13vw, 190px);
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 0.82;
+}
+
+.about-hero-introduction {
+    max-width: 720px;
+    margin-top: 48px;
+
+    color: var(--text-secondary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(24px, 2.7vw, 40px);
+    line-height: 1.3;
+}
+
+/* ========================================
+   Portrait + Story
+======================================== */
+
+.about-story {
+    padding: 125px 10%;
+
+    display: grid;
+    grid-template-columns:
+        minmax(240px, 0.68fr)
+        minmax(430px, 1.32fr);
+
+    align-items: start;
+    gap: clamp(70px, 8vw, 130px);
+
+    background: #f8f5ef;
+    border-bottom: 1px solid var(--border);
+}
+
+.about-portrait-column {
+    max-width: 420px;
+}
+
+.about-portrait-frame {
+    width: 100%;
+    overflow: hidden;
+
+    background: var(--background);
+    border: 1px solid var(--border);
+}
+
+.about-portrait-frame img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+.about-portrait-caption {
+    margin-top: 14px;
+
+    color: var(--text-secondary);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+}
+
+.about-story-copy {
+    max-width: 760px;
+    padding-top: 10px;
+}
+
+.about-story-copy p {
+    color: var(--text-secondary);
+
+    font-size: 18px;
+    line-height: 1.85;
+}
+
+.about-story-copy p + p {
+    margin-top: 28px;
+}
+
+.about-story-copy .about-lead {
+    margin-bottom: 44px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(32px, 3.7vw, 56px);
+    letter-spacing: -0.035em;
+    line-height: 1.18;
+}
+
+/* ========================================
+   Facts
+======================================== */
+
+.about-facts {
+    padding: 105px 10% 125px;
+
+    background: #e9e1d5;
+    border-bottom: 1px solid var(--border);
+}
+
+.about-facts-grid {
+    width: 100%;
+    margin-top: 42px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.about-fact {
+    min-height: 225px;
+    padding: 26px;
+
+    background: rgba(255, 255, 255, 0.22);
+
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.about-fact:first-child {
+    border-left: 1px solid var(--border);
+}
+
+.about-fact-label {
+    color: var(--accent);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+}
+
+.about-fact-value {
+    margin-top: 58px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(19px, 1.8vw, 28px);
+    line-height: 1.45;
+}
+
+/* ========================================
+   Explore
+======================================== */
+
+.about-explore {
+    padding: 125px 10% 145px;
+
+    background: #fbfaf7;
+}
+
+.about-explore-heading {
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.about-explore-heading h2 {
+    max-width: 740px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(50px, 6.5vw, 96px);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.94;
+}
+
+.about-explore-grid {
+    margin-top: 70px;
+
+    border-top: 1px solid var(--border);
+}
+
+.about-explore-card {
+    min-height: 165px;
+    padding: 30px 0;
+
+    display: grid;
+    grid-template-columns: 70px 1fr 45px;
+    gap: 28px;
+    align-items: center;
+
+    color: var(--text-primary);
+    text-decoration: none;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        padding-left 0.28s ease,
+        background 0.28s ease;
+}
+
+.about-explore-card:hover {
+    padding-left: 20px;
+    background: rgba(233, 225, 213, 0.38);
+}
+
+.about-card-number {
+    color: var(--accent);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.about-card-content h3 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(28px, 3.5vw, 52px);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+}
+
+.about-card-content p {
+    margin-top: 12px;
+
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.about-card-arrow {
+    color: var(--accent);
+    font-size: 28px;
+
+    transition: transform 0.25s ease;
+}
+
+.about-explore-card:hover .about-card-arrow {
+    transform: translateX(7px);
+}
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 900px) {
+    .about-story {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .about-portrait-column {
+        max-width: 520px;
+    }
+
+    .about-facts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-fact:nth-child(3) {
+        border-left: 1px solid var(--border);
+    }
+
+    .about-explore-heading {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 620px) {
+    .inner-header {
+        min-height: 70px;
+        padding: 0 22px;
+    }
+
+    .back-link {
+        font-size: 8px;
+        letter-spacing: 0.12em;
+    }
+
+    .about-hero {
+        min-height: 64vh;
+        padding: 118px 24px 70px;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(74px, 25vw, 118px);
+    }
+
+    .about-hero-introduction {
+        margin-top: 38px;
+        font-size: 23px;
+    }
+
+    .about-story,
+    .about-facts,
+    .about-explore {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .about-story {
+        padding-top: 82px;
+        padding-bottom: 90px;
+    }
+
+    .about-story-copy p {
+        font-size: 16px;
+    }
+
+    .about-facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-fact,
+    .about-fact:first-child,
+    .about-fact:nth-child(3) {
+        min-height: 190px;
+
+        border-right: 1px solid var(--border);
+        border-left: 1px solid var(--border);
+    }
+
+    .about-fact-value {
+        margin-top: 38px;
+    }
+
+    .about-explore-card {
+        min-height: 190px;
+
+        grid-template-columns: 36px 1fr;
+        gap: 18px;
+    }
+
+    .about-card-arrow {
+        display: none;
+    }
+}

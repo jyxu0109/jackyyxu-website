@@ -1,0 +1,933 @@
+/* ========================================
+   Teaching Page
+======================================== */
+
+.teaching-page {
+    background: var(--background-light);
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.teaching-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+    min-height: 82px;
+    padding: 0 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-link {
+    color: var(--text-secondary);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.back-link:hover {
+    color: var(--text-primary);
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   Hero
+======================================== */
+
+.teaching-hero {
+    min-height: 100vh;
+    padding: 145px 9% 100px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-content: end;
+    column-gap: 80px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fbfaf7 0%,
+            #eee8df 50%,
+            #d7c8b6 100%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.teaching-eyebrow {
+    grid-column: 1 / -1;
+
+    margin-bottom: 42px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+}
+
+.teaching-hero h1 {
+    grid-column: 1 / -1;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(88px, 15vw, 215px);
+    font-weight: 400;
+    letter-spacing: -0.065em;
+    line-height: 0.8;
+}
+
+.teaching-hero-statement {
+    margin-top: 65px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(36px, 4.6vw, 72px);
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+}
+
+.teaching-hero-description {
+    max-width: 590px;
+    margin-top: 75px;
+
+    align-self: end;
+
+    color: var(--text-secondary);
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   Philosophy
+======================================== */
+
+.teaching-philosophy {
+    padding: 140px 9% 150px;
+
+    background: #faf8f4;
+    border-bottom: 1px solid var(--border);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(300px, 0.9fr)
+        minmax(430px, 1.1fr);
+
+    align-items: start;
+    gap: clamp(70px, 9vw, 145px);
+}
+
+.philosophy-grid h2 {
+    max-width: 680px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(46px, 5.7vw, 86px);
+    font-weight: 400;
+    letter-spacing: -0.047em;
+    line-height: 0.98;
+}
+
+.philosophy-copy {
+    max-width: 720px;
+}
+
+.philosophy-copy p {
+    color: var(--text-secondary);
+
+    font-size: 18px;
+    line-height: 1.85;
+}
+
+.philosophy-copy p + p {
+    margin-top: 28px;
+}
+
+.philosophy-copy .philosophy-lead {
+    margin-bottom: 44px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(29px, 3vw, 46px);
+    letter-spacing: -0.028em;
+    line-height: 1.24;
+}
+
+
+/* ========================================
+   Where I Teach
+======================================== */
+
+.where-i-teach {
+    padding: 135px 9% 155px;
+
+    background: #e9e1d5;
+    border-bottom: 1px solid var(--border);
+}
+
+.where-heading {
+    display: grid;
+    grid-template-columns: 0.55fr 1.45fr;
+
+    align-items: start;
+    gap: 70px;
+}
+
+.where-heading h2 {
+    max-width: 930px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(50px, 6vw, 94px);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.96;
+}
+
+.teaching-place-grid {
+    margin-top: 90px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(380px, 460px));
+
+    justify-content: center;
+
+    gap: 40px;
+}
+
+.institution-panel-keio {
+    background:
+        linear-gradient(
+            135deg,
+            #f7f1e8 0%,
+            #d7c6b3 100%
+        );
+}
+
+.teaching-place-card {
+    min-width: 0;
+
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid var(--border);
+
+    overflow: hidden;
+}
+
+.teaching-place-content {
+    padding: clamp(34px, 5vw, 75px);
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.place-number {
+    color: var(--accent);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.place-type {
+    margin-top: 55px;
+
+    color: var(--accent);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.teaching-place-content h3 {
+    margin-top: 22px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 5vw, 78px);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+}
+.nyu-name {
+    font-size: clamp(34px, 4vw, 64px);
+    line-height: 0.98;
+}
+
+.nyu-name span {
+    display: block;
+}
+.place-role {
+    margin-top: 30px;
+
+    color: var(--text-primary);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+.place-location {
+    margin-top: 8px;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+    letter-spacing: 0.09em;
+
+    text-transform: uppercase;
+}
+
+.place-description {
+    max-width: 590px;
+    margin-top: auto;
+    padding-top: 55px;
+
+    color: var(--text-secondary);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.institution-panel {
+    min-height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8f5ef 0%,
+            #ded3c5 100%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.institution-panel span {
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(64px, 9vw, 135px);
+    letter-spacing: -0.06em;
+}
+
+.institution-panel-kirin {
+    background:
+        linear-gradient(
+            135deg,
+            #ded2c2 0%,
+            #f8f4ed 100%
+        );
+}
+
+.teaching-place-keio .teaching-place-content,
+.teaching-place-nyu .teaching-place-content,
+.teaching-place-kirin .teaching-place-content {
+    min-height: 500px;
+}
+
+
+/* ========================================
+   Areas of Instruction
+======================================== */
+
+.teaching-areas {
+    padding: 135px 9% 155px;
+
+    background: #faf8f4;
+    border-bottom: 1px solid var(--border);
+}
+
+.areas-heading {
+    display: grid;
+    grid-template-columns: 0.55fr 1.45fr;
+
+    align-items: start;
+    gap: 70px;
+}
+
+.areas-heading h2 {
+    max-width: 930px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(50px, 6vw, 94px);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.96;
+}
+
+.areas-grid {
+    margin-top: 85px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.area-card {
+    min-height: 360px;
+    padding: 34px;
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.area-card:hover {
+    background: #f2eee7;
+    transform: translateY(-3px);
+}
+
+.area-number {
+    color: var(--accent);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.area-card h3 {
+    max-width: 480px;
+    margin-top: 62px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(31px, 3.2vw, 52px);
+    font-weight: 400;
+    letter-spacing: -0.038em;
+    line-height: 1.02;
+}
+
+.area-card ul {
+    margin-top: 42px;
+
+    list-style: none;
+}
+
+.area-card li {
+    padding: 11px 0;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+    line-height: 1.45;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.area-card li:first-child {
+    border-top: 1px solid var(--border);
+}
+
+
+/* ========================================
+   Student Development
+======================================== */
+
+.student-development {
+    padding: 145px 10% 155px;
+
+    background: #e9e1d5;
+    border-bottom: 1px solid var(--border);
+}
+
+.student-development-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(430px, 1.25fr)
+        minmax(300px, 0.75fr);
+
+    align-items: start;
+    gap: clamp(70px, 9vw, 150px);
+}
+
+.student-development blockquote {
+    max-width: 900px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(44px, 5.7vw, 86px);
+    letter-spacing: -0.048em;
+    line-height: 1.03;
+}
+
+.student-development-copy {
+    max-width: 570px;
+    padding-top: 12px;
+}
+
+.student-development-copy p {
+    color: var(--text-secondary);
+
+    font-size: 17px;
+    line-height: 1.82;
+}
+
+.student-development-copy p + p {
+    margin-top: 26px;
+}
+
+
+/* ========================================
+   Teaching Beyond the Lesson
+======================================== */
+
+.teaching-beyond {
+    padding: 140px 9% 150px;
+
+    background: #f2eee7;
+    border-bottom: 1px solid var(--border);
+}
+
+.teaching-beyond-heading {
+    display: grid;
+    grid-template-columns: 0.55fr 1.45fr;
+
+    align-items: start;
+    gap: 70px;
+}
+
+.teaching-beyond-heading h2 {
+    max-width: 930px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(50px, 6vw, 94px);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.96;
+}
+
+.teaching-beyond-content {
+    max-width: 750px;
+    margin-top: 80px;
+    margin-left: auto;
+}
+
+.teaching-beyond-content p {
+    color: var(--text-secondary);
+
+    font-size: 18px;
+    line-height: 1.85;
+}
+
+.teaching-beyond-content p + p {
+    margin-top: 28px;
+}
+
+.teaching-ai-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+    margin-top: 42px;
+    padding-bottom: 8px;
+
+    color: var(--text-primary);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid var(--accent);
+
+    transition:
+        gap 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.teaching-ai-link:hover {
+    gap: 18px;
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   Closing
+======================================== */
+
+.teaching-closing {
+    padding: 150px 12%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d6c7b5 0%,
+            #eee8df 55%,
+            #faf8f4 100%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.teaching-closing blockquote {
+    max-width: 1150px;
+    margin-top: 42px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(46px, 6.2vw, 94px);
+    letter-spacing: -0.05em;
+    line-height: 1.03;
+}
+
+
+/* ========================================
+   Next Page
+======================================== */
+
+.next-page {
+    padding: 115px 9% 135px;
+
+    background: #faf8f4;
+}
+
+.next-page a {
+    margin-top: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--text-primary);
+    text-decoration: none;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        padding 0.3s ease,
+        background 0.3s ease;
+}
+
+.next-page a:hover {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    background: rgba(233, 225, 213, 0.4);
+}
+
+.next-page a span:first-child {
+    padding: 32px 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(40px, 6vw, 92px);
+    letter-spacing: -0.045em;
+}
+
+.next-page a span:last-child {
+    color: var(--accent);
+    font-size: 36px;
+
+    transition: transform 0.25s ease;
+}
+
+.next-page a:hover span:last-child {
+    transform: translateX(8px);
+}
+
+
+/* ========================================
+   Entrance Animation
+======================================== */
+
+.teaching-hero > * {
+    opacity: 0;
+    transform: translateY(14px);
+
+    animation:
+        teaching-reveal
+        0.9s
+        cubic-bezier(0.22, 0.61, 0.36, 1)
+        forwards;
+}
+
+.teaching-hero > *:nth-child(1) {
+    animation-delay: 0.08s;
+}
+
+.teaching-hero > *:nth-child(2) {
+    animation-delay: 0.18s;
+}
+
+.teaching-hero > *:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.teaching-hero > *:nth-child(4) {
+    animation-delay: 0.42s;
+}
+
+@keyframes teaching-reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 950px) {
+
+    .teaching-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .teaching-hero-description {
+        margin-top: 40px;
+    }
+
+    .philosophy-grid,
+    .where-heading,
+    .areas-heading,
+    .student-development-grid,
+    .teaching-beyond-heading {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+
+    .teaching-header {
+        min-height: 70px;
+        padding: 0 22px;
+    }
+    .nyu-name {
+    font-size: clamp(42px, 13vw, 62px);
+}
+
+    .back-link {
+        font-size: 8px;
+        letter-spacing: 0.12em;
+    }
+
+    .teaching-hero {
+        min-height: 82vh;
+        padding: 120px 24px 75px;
+    }
+
+    .teaching-eyebrow {
+        margin-bottom: 30px;
+    }
+
+    .teaching-hero h1 {
+        font-size: clamp(74px, 24vw, 118px);
+        line-height: 0.87;
+    }
+
+    .teaching-hero-statement {
+        margin-top: 45px;
+
+        font-size: clamp(34px, 11vw, 54px);
+    }
+
+    .teaching-hero-description {
+        font-size: 16px;
+    }
+
+    .teaching-philosophy,
+    .where-i-teach,
+    .teaching-areas,
+    .student-development,
+    .teaching-beyond,
+    .teaching-closing,
+    .next-page {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .teaching-philosophy,
+    .where-i-teach,
+    .teaching-areas,
+    .teaching-beyond {
+        padding-top: 100px;
+        padding-bottom: 115px;
+    }
+
+    .philosophy-copy p,
+    .teaching-beyond-content p {
+        font-size: 16px;
+    }
+
+    .teaching-place-grid {
+        margin-top: 60px;
+    }
+
+    .teaching-place-content {
+        padding: 30px 25px 35px;
+    }
+
+    .teaching-place-content h3 {
+        font-size: clamp(42px, 14vw, 64px);
+    }
+
+    .place-type {
+        margin-top: 42px;
+    }
+
+    .place-description {
+        padding-top: 42px;
+    }
+
+    .institution-panel {
+        min-height: 250px;
+    }
+
+    .teaching-place-nyu .teaching-place-content,
+    .teaching-place-kirin .teaching-place-content {
+        min-height: 430px;
+    }
+
+    .areas-grid {
+        margin-top: 60px;
+    }
+
+    .area-card {
+        min-height: 310px;
+        padding: 26px;
+    }
+
+    .area-card h3 {
+        margin-top: 48px;
+    }
+
+    .student-development {
+        padding-top: 105px;
+        padding-bottom: 115px;
+    }
+
+    .student-development-copy {
+        padding-top: 0;
+    }
+
+    .teaching-beyond-content {
+        margin-top: 55px;
+        margin-left: 0;
+    }
+
+    .teaching-closing {
+        padding-top: 110px;
+        padding-bottom: 115px;
+    }
+
+    .next-page {
+        padding-top: 90px;
+        padding-bottom: 105px;
+    }
+}
+
+
+/* ========================================
+   Reduced Motion
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .teaching-hero > * {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+}
