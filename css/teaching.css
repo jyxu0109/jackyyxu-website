@@ -852,8 +852,11 @@
     }
 
     .teaching-place-grid {
-        margin-top: 60px;
-    }
+    margin-top: 60px;
+
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+}
 
     .teaching-place-content {
         padding: 30px 25px 35px;
@@ -875,10 +878,11 @@
         min-height: 250px;
     }
 
-    .teaching-place-nyu .teaching-place-content,
-    .teaching-place-kirin .teaching-place-content {
-        min-height: 430px;
-    }
+    .teaching-place-keio .teaching-place-content,
+.teaching-place-nyu .teaching-place-content,
+.teaching-place-kirin .teaching-place-content {
+    min-height: auto;
+}
 
     .areas-grid {
         margin-top: 60px;
