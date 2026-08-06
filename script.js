@@ -50,6 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
     ].join(", ");
 
     const revealElements = document.querySelectorAll(revealSelector);
+    
+    const isMobile = window.matchMedia("(max-width: 620px)").matches;
+
+if (isMobile) {
+    revealElements.forEach((element) => {
+        element.classList.add("scroll-reveal", "is-visible");
+        element.style.setProperty("--reveal-delay", "0s");
+    });
+
+    return;
+}
 
     if (!("IntersectionObserver" in window)) {
         revealElements.forEach((element) => {
