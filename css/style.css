@@ -512,8 +512,6 @@ a {
         opacity 0.9s ease var(--reveal-delay, 0s),
         transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1)
         var(--reveal-delay, 0s);
-
-    will-change: opacity, transform;
 }
 
 .scroll-reveal.is-visible {
@@ -740,6 +738,19 @@ a {
 
     .hero-name {
         font-size: clamp(54px, 16vw, 82px);
+
+        filter: none;
+        animation-duration: 1s;
+    }
+
+    .hero-eyebrow {
+        animation-duration: 0.7s;
+        animation-delay: 0.2s;
+    }
+
+    .hero-divider {
+        animation-duration: 0.8s;
+        animation-delay: 0.35s;
     }
 
     .hero-title-links {
@@ -749,10 +760,27 @@ a {
 
         flex-wrap: wrap;
         row-gap: 10px;
+
+        animation-duration: 0.7s;
+        animation-delay: 0.5s;
     }
 
     .hero-title-links a {
         font-size: 10px;
+    }
+
+    .scroll-indicator {
+        animation-duration: 0.7s;
+        animation-delay: 0.8s;
+    }
+
+    .scroll-reveal {
+        transform: translateY(12px);
+
+        transition:
+            opacity 0.55s ease var(--reveal-delay, 0s),
+            transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1)
+            var(--reveal-delay, 0s);
     }
 
     .preview-highlights {

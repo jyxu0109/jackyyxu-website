@@ -1,69 +1,112 @@
 /* ========================================
-   Homepage scroll reveal
+   Scroll reveal
 ======================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-    const revealElements = document.querySelectorAll(
-        ".content-section .section-label, " +
-        ".content-section h2, " +
-        ".content-section .section-description, " +
-        ".content-section .preview-description, " +
-        ".content-section .preview-columns, " +
-        ".content-section .preview-highlights, " +
-        ".content-section .experience-columns, " +
-        ".content-section .read-more-link, " +
-        ".content-section .email-link"
-    );
+    const revealSelector = [
+        ".content-section .section-label",
+        ".content-section h2",
+        ".content-section .section-description",
+        ".content-section .preview-description",
+        ".content-section .preview-columns",
+        ".content-section .preview-highlights",
+        ".content-section .read-more-link",
+        ".content-section .email-link",
 
-    if (!revealElements.length) {
+        ".about-story > *",
+        ".about-fact",
+        ".about-explore-card",
+
+        ".performance-intro-grid > *",
+        ".experience-heading > *",
+        ".experience-column",
+        ".featured-project-heading > *",
+        ".featured-project-grid > *",
+        ".approach-grid > *",
+
+        ".philosophy-grid > *",
+        ".where-heading > *",
+        ".teaching-place-card",
+        ".areas-heading > *",
+        ".area-card",
+        ".student-development-grid > *",
+        ".teaching-beyond-heading > *",
+        ".teaching-beyond-content",
+
+        ".ai-why-grid > *",
+        ".ai-product-heading > *",
+        ".ai-product-grid > *",
+        ".ai-capabilities-heading > *",
+        ".capability-card",
+        ".principle",
+        ".ai-roadmap-heading > *",
+        ".roadmap-item",
+
+        ".contact-details-grid > *",
+        ".inquiries-heading > *",
+        ".inquiry-card",
+        ".contact-method",
+        ".contact-direct > *"
+    ].join(", ");
+
+    const revealElements = document.querySelectorAll(revealSelector);
+
+    if (!("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => {
+            element.classList.add("scroll-reveal", "is-visible");
+        });
+
         return;
     }
 
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
+    const observer = new IntersectionObserver(
+        (entries, currentObserver) => {
             entries.forEach((entry) => {
                 if (!entry.isIntersecting) {
                     return;
                 }
 
                 entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
+                currentObserver.unobserve(entry.target);
             });
         },
         {
-            threshold: 0.14,
-            rootMargin: "0px 0px -60px 0px"
+            threshold: 0.08,
+            rootMargin: "0px 0px -25px 0px"
         }
     );
 
     revealElements.forEach((element) => {
         element.classList.add("scroll-reveal");
 
-        const section = element.closest(".content-section");
+        /*
+         * Delay is calculated only among nearby siblings.
+         * It does not grow continuously throughout the whole page.
+         */
+        const parent = element.parentElement;
 
-        if (section) {
-            const sectionElements = Array.from(
-                section.querySelectorAll(
-                    ".section-label, " +
-                    "h2, " +
-                    ".section-description, " +
-                    ".preview-description, " +
-                    ".preview-columns, " +
-                    ".preview-highlights, " +
-                    ".experience-columns, " +
-                    ".read-more-link, " +
-                    ".email-link"
+        if (parent) {
+            const siblings = Array.from(parent.children).filter((child) =>
+                child.matches(
+                    ".section-label, h2, .section-description, " +
+                    ".preview-description, .preview-columns, " +
+                    ".preview-highlights, .read-more-link, .email-link, " +
+                    ".about-fact, .about-explore-card, " +
+                    ".experience-column, .teaching-place-card, " +
+                    ".area-card, .capability-card, .principle, " +
+                    ".roadmap-item, .inquiry-card, .contact-method"
                 )
             );
 
-            const position = sectionElements.indexOf(element);
+            const position = siblings.indexOf(element);
+            const safePosition = Math.max(0, Math.min(position, 4));
 
             element.style.setProperty(
                 "--reveal-delay",
-                `${Math.max(position, 0) * 0.12}s`
+                `${safePosition * 0.09}s`
             );
         }
 
-        revealObserver.observe(element);
+        observer.observe(element);
     });
 });
