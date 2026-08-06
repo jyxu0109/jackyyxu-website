@@ -573,7 +573,7 @@ a.contact-method:hover .contact-method-arrow {
 }
 
 .contact-explore-links a {
-    padding: 25px 0;
+    padding: 18px 0;
 
     display: flex;
     align-items: center;
@@ -602,13 +602,14 @@ a.contact-method:hover .contact-method-arrow {
         "Times New Roman",
         serif;
 
-    font-size: clamp(31px, 4.5vw, 64px);
-    letter-spacing: -0.04em;
+    font-size: clamp(24px, 2.8vw, 42px);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
 }
 
 .contact-explore-links a span:last-child {
     color: var(--accent);
-    font-size: 28px;
+    font-size: 22px;
 
     transition: transform 0.25s ease;
 }

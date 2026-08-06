@@ -941,3 +941,104 @@ header.inner-header .logo {
         padding: 0 22px;
     }
 }
+
+/* ========================================
+   Unified Explore Navigation
+======================================== */
+
+.next-page {
+    padding: 90px 9% 105px !important;
+
+    background: #e9e1d5 !important;
+    border-bottom: 1px solid var(--border);
+}
+
+.next-page .section-label {
+    margin-bottom: 34px;
+}
+
+.next-page a {
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    padding: 18px 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--text-primary);
+    text-decoration: none;
+
+    background: transparent !important;
+    border-top: 1px solid var(--border);
+    border-bottom: none !important;
+
+    transition:
+        padding 0.28s ease,
+        background 0.28s ease;
+}
+
+.next-page a:last-child {
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.next-page a:hover {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+
+    background: rgba(255, 255, 255, 0.24) !important;
+}
+
+.next-page a span:first-child {
+    padding: 0 !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(24px, 2.8vw, 42px) !important;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+}
+
+.next-page a span:last-child {
+    color: var(--accent);
+
+    font-size: 22px !important;
+
+    transition: transform 0.25s ease;
+}
+
+.next-page a:hover span:last-child {
+    transform: translateX(7px);
+}
+
+
+/* ========================================
+   Unified Explore Navigation — Mobile
+======================================== */
+
+@media (max-width: 620px) {
+
+    .next-page {
+        padding: 75px 24px 90px !important;
+    }
+
+    .next-page .section-label {
+        margin-bottom: 28px;
+    }
+
+    .next-page a {
+        padding: 17px 0 !important;
+    }
+
+    .next-page a span:first-child {
+        font-size: 28px !important;
+    }
+
+    .next-page a span:last-child {
+        font-size: 19px !important;
+    }
+}

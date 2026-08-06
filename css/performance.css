@@ -327,6 +327,17 @@
     line-height: 0.94;
 }
 
+.featured-project-subtitle {
+    margin-top: 18px;
+
+    color: var(--accent);
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+}
+
 .featured-project-grid {
     margin-top: 85px;
 
