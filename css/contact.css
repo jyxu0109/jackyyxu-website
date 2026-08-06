@@ -533,3 +533,113 @@ a.contact-method:hover .contact-method-arrow {
         animation: none;
     }
 }
+
+/* ========================================
+   Compact Contact Layout
+======================================== */
+
+.contact-hero {
+    min-height: 72vh;
+    padding-top: 135px;
+    padding-bottom: 85px;
+}
+
+.contact-details {
+    padding-top: 110px;
+    padding-bottom: 125px;
+}
+
+.contact-method-areas {
+    font-size: clamp(20px, 2.2vw, 34px);
+    line-height: 1.3;
+}
+
+
+/* ========================================
+   Contact Explore
+======================================== */
+
+.contact-explore {
+    padding: 100px 9% 120px;
+
+    background: #e9e1d5;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-explore-links {
+    margin-top: 36px;
+
+    border-top: 1px solid var(--border);
+}
+
+.contact-explore-links a {
+    padding: 25px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--text-primary);
+    text-decoration: none;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        padding 0.28s ease,
+        background 0.28s ease;
+}
+
+.contact-explore-links a:hover {
+    padding-right: 18px;
+    padding-left: 18px;
+
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.contact-explore-links a span:first-child {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(31px, 4.5vw, 64px);
+    letter-spacing: -0.04em;
+}
+
+.contact-explore-links a span:last-child {
+    color: var(--accent);
+    font-size: 28px;
+
+    transition: transform 0.25s ease;
+}
+
+.contact-explore-links a:hover span:last-child {
+    transform: translateX(7px);
+}
+
+
+@media (max-width: 620px) {
+
+    .contact-hero {
+        min-height: 66vh;
+        padding-top: 120px;
+        padding-bottom: 70px;
+    }
+
+    .contact-details {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+
+    .contact-explore {
+        padding: 80px 24px 95px;
+    }
+
+    .contact-explore-links a {
+        padding: 22px 0;
+    }
+
+    .contact-explore-links a span:first-child {
+        font-size: 34px;
+    }
+}
