@@ -435,6 +435,161 @@
     line-height: 1.18;
 }
 
+/* ========================================
+   Selected Moments
+======================================== */
+
+.performance-moments {
+    padding: 135px 9% 150px;
+
+    background: #e9e1d5;
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* Heading */
+
+.performance-moments-heading {
+    display: grid;
+    grid-template-columns: 0.55fr 1.45fr;
+
+    align-items: start;
+    gap: 70px;
+}
+
+.performance-moments-heading h2 {
+    max-width: 930px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(50px, 6vw, 94px);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.96;
+}
+
+
+/* Gallery */
+
+.moments-grid {
+    margin-top: 85px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-items: start;
+    column-gap: clamp(55px, 7vw, 110px);
+    row-gap: 85px;
+}
+
+
+/* Cards */
+
+.moment-card {
+    min-width: 0;
+    margin: 0;
+}
+
+.moment-card:nth-child(even) {
+    margin-top: 90px;
+}
+
+
+/* Images */
+
+.moment-image {
+    width: 100%;
+    overflow: hidden;
+
+    background: #f2eee7;
+    border: 1px solid var(--border);
+}
+
+.moment-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.moment-card:hover .moment-image img {
+    opacity: 0.96;
+    transform: scale(1.01);
+}
+
+
+/* Image Proportions */
+
+.moment-portrait .moment-image {
+    aspect-ratio: 4 / 5;
+}
+
+.moment-landscape .moment-image {
+    aspect-ratio: 4 / 3;
+}
+
+
+/* Captions */
+
+.moment-card figcaption {
+    margin-top: 18px;
+}
+
+.moment-label {
+    display: block;
+
+    color: var(--accent);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.moment-card figcaption p {
+    max-width: 520px;
+    margin-top: 10px;
+
+    color: var(--text-primary);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(20px, 1.8vw, 28px);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+}
+
+.moment-location {
+    display: block;
+    margin-top: 9px;
+
+    color: var(--text-secondary);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+
+    text-transform: uppercase;
+}
+
 
 /* ========================================
    Approach
@@ -627,6 +782,7 @@
     .performance-intro-grid,
     .experience-heading,
     .featured-project-heading,
+    .performance-moments-heading,
     .featured-project-grid,
     .approach-grid {
         grid-template-columns: 1fr;
@@ -641,7 +797,17 @@
     .featured-project-figure {
         max-width: 620px;
     }
+
+    .moments-grid {
+        column-gap: 38px;
+        row-gap: 70px;
+    }
+
+    .moment-card:nth-child(even) {
+        margin-top: 55px;
+    }
 }
+
 
 @media (max-width: 620px) {
 
@@ -676,9 +842,13 @@
         line-height: 1.75;
     }
 
+
+    /* Main section spacing */
+
     .performance-intro,
     .selected-experience,
     .featured-project,
+    .performance-moments,
     .performance-approach,
     .performance-closing,
     .next-page {
@@ -688,10 +858,14 @@
 
     .performance-intro,
     .selected-experience,
-    .featured-project {
+    .featured-project,
+    .performance-moments {
         padding-top: 100px;
         padding-bottom: 115px;
     }
+
+
+    /* Introduction / Featured Projects */
 
     .performance-intro-copy p,
     .featured-project-copy p {
@@ -715,6 +889,49 @@
         max-width: none;
     }
 
+
+    /* Selected Moments */
+
+    .performance-moments-heading h2 {
+        font-size: clamp(42px, 13vw, 62px);
+    }
+
+    .moments-grid {
+        margin-top: 60px;
+
+        grid-template-columns: 1fr;
+        gap: 58px;
+    }
+
+    .moment-card:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .moment-portrait .moment-image,
+    .moment-landscape .moment-image {
+        aspect-ratio: auto;
+    }
+
+    .moment-image img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .moment-card figcaption {
+        margin-top: 14px;
+    }
+
+    .moment-card figcaption p {
+        font-size: 21px;
+    }
+
+    .moment-location {
+        font-size: 9px;
+    }
+
+
+    /* Approach */
+
     .performance-approach {
         padding-top: 105px;
         padding-bottom: 115px;
@@ -724,10 +941,16 @@
         padding-top: 0;
     }
 
+
+    /* Closing */
+
     .performance-closing {
         padding-top: 110px;
         padding-bottom: 115px;
     }
+
+
+    /* Explore More */
 
     .next-page {
         padding-top: 90px;
@@ -748,7 +971,8 @@
         animation: none;
     }
 
-    .featured-project-image img {
+    .featured-project-image img,
+    .moment-image img {
         transform: none;
         transition: none;
     }
