@@ -536,6 +536,10 @@
     aspect-ratio: 4 / 5;
 }
 
+.moment-tall .moment-image {
+    aspect-ratio: 3 / 4;
+}
+
 .moment-landscape .moment-image {
     aspect-ratio: 4 / 3;
 }
@@ -908,9 +912,10 @@
     }
 
     .moment-portrait .moment-image,
+    .moment-tall .moment-image,
     .moment-landscape .moment-image {
         aspect-ratio: auto;
-    }
+    }   
 
     .moment-image img {
         height: auto;
